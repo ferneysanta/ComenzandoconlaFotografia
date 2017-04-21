@@ -1,88 +1,122 @@
 body
 {
   font-family: 'Dancing Script';
-  background-color: black;
+  background-color: #02010a;
 }
 .contenedor{
   margin: 0;
   padding: 0;
   width: 100%;
   border-radius: 10px 10px;
-
+  animation: 2s AnimacionEntrada;
 }
 .contenedor div{
   box-sizing: border-box;
   min-width: 150px;
   padding: 20px;
 }
+
+.logo-menu{
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 150px;qqa<<<
+  margin: 0;
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: #5b7989;
+}
+.logo-menu h1{
+  color: white;
+  text-shadow: 2px 2px  #02010a;
+  font-size: 2em;
+}
 .logo {
 	color: black;
-	background-color: #E6EBE0;
-  border-radius: 10px 0 0 0;
 }
-
 .menu {
-	color: black;
-	background-color: #F4F1BB;
+	color: white;
   text-align: right;
-  padding: 40px;
-  font-size: 1.5em;
-  border-radius: 0 10px 0 0;
+  font-size: 1.2em;
 }
 .menu a{
 	padding: 10px;
-  margin-top: 50px;;
+  margin-top: 50px;
+  color: white;
+  font-size: 1em;
+}
+.menu a:active {
+  text-decoration: none;
 }
 
 .imgcentral {
 	color: black;
-	background-color: #9BC1BC;
+	background-color: #82c3a6;
   text-align: center;
 }
 .imgcentral img {
-  width: 80%
+  width: 80%;
+  box-shadow: 2px 2px #02010a;
 }
 
 .imgsecundariaizq {
 	color: black;
-	background-color: #36C9C6;
+	background-color: #d5c75f;
   text-align: center;
+
 }
 .imgsecundariaizq img {
-  width: 95%
+  width: 90%;
+  border: solid 1px black;
+  box-shadow: 2px 2px #02010a;
+}
+.imgsecundariaizq  img:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  border: solid 2px #82c3a6;
+
 }
 
 .imgsecundariader {
 	color: black;
-	background-color: #36C9C6;
+	background-color: #d5c75f;
   text-align: center;
 }
 .imgsecundariader img {
-  width: 75%
+  width: 72%;
+  border: solid 1px black;
+  box-shadow: 2px 2px #02010a;
+}
+.imgsecundariader img:hover{
+  -webkit-transform: translate(20px, -5px);
+  transform: translate(20px, -5px);
 }
 
+.footer{
+  color: black;
+  background-color:  #C6d5c5;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 150px;
+  padding: 20px;
+  border-radius: 0 0 10px 10px ;
+}
 .contacto{
 	color: black;
-	background-color: #36C9C6;
-  border-radius: 0 0 0 10px;
 }
 .terminos {
 	color: black;
-	background-color: #36C9C6;
 }
 .redesSociales {
 	color: black;
-	background-color: #36C9C6;
+  font-size: 0.9em;
 }
 .redesSociales img{
 	width: 10%;
 }
 .derechos {
 	color: black;
-	background-color: #36C9C6;
   border-radius: 0 0 10px 0;
 }
-
 
 .contenedor {
 	display: -webkit-flex;
@@ -90,6 +124,19 @@ body
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
 }
+.logo-menu{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.footer{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
 
 .logo, .menu, .imgcentral, .imgsecundariaizq, .imgsecundariader,
 .contacto, .terminos, .redesSociales, .derechos {
@@ -100,6 +147,7 @@ body
   .logo, .menu, .imgcentral, .imgsecundariaizq, .imgsecundariader,
   .contacto, .terminos, .redesSociales, .derechos  {
 		width: 100%;
+    text-align: center;
 	}
 }
 
@@ -124,4 +172,16 @@ body
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+@-webkit-keyframes AnimacionEntrada {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
